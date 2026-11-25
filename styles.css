@@ -108,3 +108,9 @@ footer {
         margin-right: 10px;
     }
 }
+.confirmation {
+    background: #e7f5e7;
+    border: 2px solid #1b6b1b;
+    padding: 10px;
+    margin-bottom: 15px;
+}
