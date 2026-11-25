@@ -38,7 +38,8 @@ table {
     border-collapse: collapse;
 }
 
-td {
+td,
+th {
     border: 1px solid black;
     padding: 5px;
 }
@@ -82,4 +83,8 @@ input[type="radio"] {
 
 fieldset {
     margin: 10px 0;
+}
+th {
+    text-align: left;
+    background: #e6ecf3;
 }
