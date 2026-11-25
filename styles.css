@@ -88,3 +88,8 @@ th {
     text-align: left;
     background: #e6ecf3;
 }
+nav a[aria-current="page"] {
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 3px solid white;
+}
