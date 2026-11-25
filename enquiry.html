@@ -23,9 +23,7 @@
 </header>
 
 <main>
-    <h2>Vehicle enquiry</h2>
-    <p>Complete the form below and a member of our team will contact you.</p>
-    <p>Fields marked in red are important.</p>
+      <p>Fields marked with an asterisk (*) are required.</p>
 
     <form action="#" method="post">
         <div>
@@ -40,42 +38,40 @@
         </div>
 
         <div>
-            <span>Full name</span>
-            <input type="text" name="name" placeholder="e.g. Dave Smith">
+            <label for="name">Full name (required) *</label>
+            <input type="text" id="name" name="name" autocomplete="name" placeholder="e.g. Dave Smith" required>
         </div>
 
         <div>
-            <label for="email">Email address</label>
-            <input type="text" id="email" name="email">
+            <label for="email">Email address (required) *</label>
+            <input type="email" id="email" name="email" autocomplete="email" required>
         </div>
 
         <div>
             <label for="phone">Telephone</label>
-            <input type="text" id="phone" name="phone">
+            <input type="tel" id="phone" name="phone" autocomplete="tel">
         </div>
 
         <div>
-            <label for="message">Your message</label>
-            <textarea id="message" name="message">Tell us what you would like to know...</textarea>
+            <label for="message">Your message (required) *</label>
+            <textarea id="message" name="message" placeholder="Tell us what you would like to know" required></textarea>
         </div>
 
         <div>
             <input type="checkbox" id="updates" name="updates">
-            <span>Send me occasional offers and updates</span>
+            <label for="updates" class="inline-label">Send me occasional offers and updates</label>
         </div>
 
-        <div>
-            <label>Preferred contact method</label>
-            <div>
-                <input type="radio" name="contact" value="email"> Email
-                <input type="radio" name="contact" value="phone"> Phone
-            </div>
-        </div>
+        <fieldset>
+            <legend>Preferred contact method</legend>
+            <input type="radio" id="contact-email" name="contact" value="email">
+            <label for="contact-email" class="inline-label">Email</label>
+            <input type="radio" id="contact-phone" name="contact" value="phone">
+            <label for="contact-phone" class="inline-label">Phone</label>
+        </fieldset>
 
-        <button type="submit">SUBMIT</button>
+        <button type="submit">Send enquiry</button>
     </form>
-
-    <p>We aim to respond within two working days.</p>
 </main>
 
 <footer>
