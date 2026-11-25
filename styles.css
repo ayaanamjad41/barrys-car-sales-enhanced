@@ -1,5 +1,5 @@
 body {
-    font-family: Arial;
+    font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     background: #eeeeee;
 }
@@ -23,8 +23,14 @@ nav a {
     margin-right: 15px;
 }
 
+nav a[aria-current="page"] {
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 3px solid white;
+}
+
 main {
-    width: 900px;
+    max-width: 900px;
     margin: 20px auto;
     padding: 20px;
     background: white;
@@ -32,10 +38,13 @@ main {
 
 img {
     width: 300px;
+    max-width: 100%;
+    height: auto;
 }
 
 table {
     border-collapse: collapse;
+    width: 100%;
 }
 
 td,
@@ -44,19 +53,40 @@ th {
     padding: 5px;
 }
 
+th {
+    text-align: left;
+    background: #e6ecf3;
+}
+
 label {
     display: block;
+}
+
+label.inline-label {
+    display: inline;
+    margin-right: 15px;
 }
 
 input,
 select,
 textarea {
-    width: 400px;
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
     margin-bottom: 10px;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    width: auto;
 }
 
 textarea {
     height: 100px;
+}
+
+fieldset {
+    margin: 10px 0;
 }
 
 button {
@@ -66,30 +96,15 @@ button {
 }
 
 footer {
-    width: 900px;
+    max-width: 900px;
     margin: auto;
-    font-size: 12px;
+    font-size: 0.875rem;
 }
 
-label.inline-label {
-    display: inline;
-    margin-right: 15px;
-}
-
-input[type="checkbox"],
-input[type="radio"] {
-    width: auto;
-}
-
-fieldset {
-    margin: 10px 0;
-}
-th {
-    text-align: left;
-    background: #e6ecf3;
-}
-nav a[aria-current="page"] {
-    font-weight: bold;
-    text-decoration: none;
-    border-bottom: 3px solid white;
+@media (max-width: 960px) {
+    main,
+    footer {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
 }
