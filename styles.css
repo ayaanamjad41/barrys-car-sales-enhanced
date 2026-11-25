@@ -69,3 +69,17 @@ footer {
     margin: auto;
     font-size: 12px;
 }
+
+label.inline-label {
+    display: inline;
+    margin-right: 15px;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    width: auto;
+}
+
+fieldset {
+    margin: 10px 0;
+}
